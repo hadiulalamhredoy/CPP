@@ -1,0 +1,141 @@
+
+#include <iostream>
+#include<iterator>
+#include<algorithm>
+#include<math.h>
+#include<vector>
+#include<stack>
+#include<string.h>
+#include<map>
+#include<bitset>
+#include<set>
+#include<deque>
+#include<list>
+#define In 1000006
+#define pi acos(-1.0)
+
+#define pb push_back
+#define mp make_pair
+
+using namespace std;
+
+
+int main() {
+    
+    int d, total;
+    
+    cin >> d >> total;
+    
+    vector <pair <int,int> programmingcontest;
+    
+    vector <int>rem;
+    vector<int>ans;
+    
+    
+    for(int i =0; i<d; i++){
+        int a,b;
+        cin >> a>>b;
+        programming.push_back(mall_pair(a,b));
+    }
+    
+    int sum = 0 ;
+    
+    for(int i =0; i<d; i++){
+        if(programmingcontest [i].first == programmingcontest[i].second){
+            sum+= programmingcontest[i].first;
+            ans.push_back(programming[i].first);
+            rem.push_back(0);
+            
+            
+        }
+        
+        else {
+            
+            sum= +programmingcontest[i].first;
+            ans.push_back(programming[i].first);
+            rem.push_back(0);
+            
+        }
+        
+    }
+    
+        if(sum==total)
+         {
+          
+             cout<<"YES\n";
+             for(int i =0; i<d; i++){
+                 
+                 cout<<programmingcontest[i].first<<"";
+                 
+                 
+             }
+             
+             cout<<endl;
+             
+             else if(sum>total){
+                 cout<<"No\n";
+                
+             }
+             
+             else {
+                 int temp1 = total - sum;
+                 temp = 0;
+                for(int i = 0; i<d; i++){
+                    
+                   temp2 += rem[i];
+                    
+                }
+                 
+             }
+             
+             
+             if(temp2 <temp1) {
+                 cout<<"No\n";
+                 
+             }
+            
+            
+            
+            else {
+                int flag = 0;
+        
+        while(true){
+          for(int i =0; i<d; i++){
+              if(rem [i]>=1) {
+                  sum+=1;
+                  
+                  ans[i]= ans[i]+1;
+                  rem[i] = rem[i]-1;
+              }
+                
+             if(sum==total){
+                 flag=1;
+                 break;
+             }
+            if(flag==1){
+                
+             break;
+                
+                
+            }
+     }
+            
+            
+            cout<<"Yes\n";
+            
+        }
+        for(int i =0; i<d; i++){
+            cout<<ans[i]<<"";
+            
+        }
+        
+          cout<<endl;
+            }
+            
+             
+         }
+    
+    
+
+    return 0;
+}
