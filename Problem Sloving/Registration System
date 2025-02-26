@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+using ll = long long int;
+
+#define yes cout <<"Yes\n";
+#define no  cout <<"No\n";
+#define endl "\n";
+#define ft float
+#define du double 
+#define ull unsigned long long
+#define vec vector<ll>
+#define mem (dp,i),memset(dp,i,size of (dp));
+
+int main ()
+{
+    ios_base:: sync_with_stdio (flase);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    map <string,int>m;
+    
+    int n;
+    cin>>n;
+    while(n--){
+        string s;
+        cin>>s;
+        if(m[s] == 0)
+        {
+            cout << "Ok\n";
+            m[s] =1;
+        }
+        
+        else {
+            
+            cout << s << m[s] <<endl;
+            m[s]++
+        }
+        
+    }
+    
+    
+    
+    
+}
