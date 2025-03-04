@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string sequence;
+   cin >> sequence;
+   for(int i = 0 ; i < t ; i++ )
+   {
+       for(int j = 0 ; j < sequence.size() ; i++)
+       {
+           if(sequence[j] == 'B' && sequence[j+1] == 'G')
+           {
+              sequence [j] ='G';
+              sequence [j+1] = 'B';
+              j++;
+               
+           }
+           
+       }
+       
+   }
+         cout << sequence << endl;
+         return 0;
+    
+    
+}
