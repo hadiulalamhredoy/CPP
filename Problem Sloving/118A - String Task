@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string input;
+    cin >> input;
+    
+    for(int i=0; i<input.size() ; i++)
+    {
+        char letter = tolower(input[i]);
+        if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+        {
+            continue;
+        }
+        
+        
+        else 
+        {
+            
+            result += ".";
+            result += letter;
+            
+        }
+    }
+    
+     cout << result << endl;
+     return 0;
+}
