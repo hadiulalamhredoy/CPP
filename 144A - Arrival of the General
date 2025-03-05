@@ -28,7 +28,7 @@ int main()
              minI = i;
              
          }
-         
+      }   
          if(minI > maxI)
          {
              cout << maxI + n - 1 - minI << endl;
@@ -39,6 +39,6 @@ int main()
              cout << maxI + n - 1 - minI << endl;
          }
          
-     }
+     
        return 0;
 }
