@@ -2,28 +2,18 @@
 using namespace std;
 int main()
 {
-    int n; 
-    cin >> n;
-
-    for(int i = 1; i <=n; i++)
+    
+    int k, l, m, n, d, cnt = 0;
+    cin>> k >> l >> m >> n >> d;
+    for(int p = 1 ; p <=d; p++)
     {
-
-     if(i == 1)
-     {
-        cout << "I hate " ;
+        if(p%k == 0  || p%1 == 0 || p%m == 0 || p%n == 0)
+        {
+            cnt++;
+        }
         
-     }
-
-    else 
-   {
-        cout << " that I Love";
+        
     }
-   
-     
-}
-
-  cout << "it" << endl;
-  return 0;
-
-
+    cout << cnt << endl;
+    return 0;
 }
