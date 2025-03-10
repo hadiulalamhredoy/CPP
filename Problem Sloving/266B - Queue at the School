@@ -10,7 +10,7 @@ int main()
    cin >> sequence;
    for(int i = 0 ; i < t ; i++)
    {
-       for(int j = 0 ; j < sequence.size() ; i++)
+       for(int j = 0 ; j < sequence.size() ; j++)
        {
            if(sequence[j] == 'B' && sequence[j+1] == 'G')
            {
