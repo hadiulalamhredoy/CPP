@@ -3,6 +3,7 @@ using namespace std;
 int main()
 {
     int n , cnt = 0;
+    cin >> n;
     string stone Colour;
     cin>> stone  Colour;
 
