@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int size;
+    cin>>size;
+    int arr[size];
+
+    for(int i = 0;i<size; i++){
+        cin>>arr[i];
+    }
+
+    int n;
+    cin>>n;
+
+    for(int i = 1 ;i<=n;i++){
+        int type;
+        cin>>type;
+        int start,end;
+        cin>>start>>end;
+
+        if(type == 0){
+            int mn= INT_MAX;
+            for(int j=start;j<end;j++){
+                mn = min(mn,arr[j]);
+                }
+            cout<<mn;
+        }
+
+
+        if(type==1){
+            int mx = INT_MIN;
+            for(int j=start ; j<end;j++){
+               mx= max(mx,arr[j]);
+            }
+            cout<<mx;
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
