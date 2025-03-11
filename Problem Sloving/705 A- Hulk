@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int n;
+    cin >> n;
+    for(int i = 1; i<=n; i++)
+    {
+        if(i == 1)
+        {
+            cout << "i hate";
+        }
+
+      else if(i % 2 !=0)
+      {
+        cout << "that i hate";
+      }
+
+    else
+     {
+         cout << "that i love";
+    }
+
+
+    }
+
+      cout << "it" <<endl;
+      return 0;
+
+
+}
