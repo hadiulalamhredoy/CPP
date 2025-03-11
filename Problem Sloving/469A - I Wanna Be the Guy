@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
      int n , p, vx;
-     cin>> n;
+     cin>> n >> p;
      set<int>levels;
 
      for(int i = 0; i<p; i++)
@@ -26,13 +26,13 @@ int main()
 
      if(levels.size() == n)
      {
-        cout << " i become the guy" <<endl;
+        cout << " i become the guy." <<endl;
      }
 
 
      else 
      {
-         cout <<"oh , my keyboard" <<endl; 
+         cout <<"oh , my keyboard!" <<endl; 
        }
 
 
