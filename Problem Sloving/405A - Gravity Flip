@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,v;
+    cin>> n;
+    vector<int>cubes;
+    for(int i = 0; i<n; i++)
+    {
+        cin>> v;
+        cubes.push_back(v);
+    }
+    
+    sort(cubes.begin(),cubes.end());
+    for(auto : cubes)
+    {
+        cout << x << " ";
+        
+    }
+    
+         return 0;
+    
+    
+}
