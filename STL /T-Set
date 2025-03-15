@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int q;
+    cin >> q;
+    set<int> s;
+    for(int i = 0; i< q; i++){
+        int t , x;
+        cin >> t >> x;
+        if(t == 1){
+            s.insert(x);
+        }else if(t == 2){
+            s.erase(x);
+        }else{
+            int cnt = s.count(x);
+            cout << (cnt == 1 ? "YES" : "NO") << '\n';
+            
+        }
+        
+    }
+}
