@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n , q;
+    cin >> n >> q;
+    
+    queue<int> s[n];
+    for(int i = 0; i< q; i++){
+        int type;
+        cin >> type;
+        if(type == 0){
+            int p, vaule;
+            cin >> p >> vaule;
+            s[p].push(vaule);
+        }else if(type == 1){
+            int p;
+            cin >> p;
+            if(s[p].size()>0){
+                cout << s[p].front() << endl;
+            }
+        }else{
+            int p;
+            cin >> p;
+            if(s[p].size()>0){
+                s[p].pop();
+            }
+        }
+    }
+    
+    return 0;
+    
+    
+}
