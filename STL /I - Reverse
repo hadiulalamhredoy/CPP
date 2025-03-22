@@ -5,34 +5,27 @@ int main ()
      int n;
      cin>>n;
      int arr[n];
-
      for(int i = 0; i < n; i++){
-        int p;
-        cin >> p;
-        arr[i] = p;
-
+        cin>>arr[i];
      }
       
           int q;
-          cin >> q;
+          cin>>q;
 
-          for(int i = 0; i < q; i++){
-          int a , b ;
-          cin >> a >> b;
+          for(int i=0; i <q; i++) {
+          int a,b ;
+          cin>>a>> b;
 
-          for(int j = a,k = b-1;  j<=k; j++,k--){
+          for(int j = a,k = b-1; j<=k; j++, k--){
            swap(arr[j],arr[k]);
+           }
+        
+    }   
+          for(int i =0; i < n; i++){
+            cout << arr[i] <<"\n"[i == n - 1];
+           
           }
           
-          for(int i =0; i < n ; i++){
-            cout << arr[i];
-            if(i != n-1){
-                cout << "";
-            }
-          }
-             cout <<"\n";
-
-          }
        
        return 0; 
 }
