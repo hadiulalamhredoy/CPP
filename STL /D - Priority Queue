@@ -28,9 +28,12 @@ int main ()
                 q[t].pop();
             }
           }
-            return 0; 
+            
  
       }
+
+
+       return 0;
 
 }
 
