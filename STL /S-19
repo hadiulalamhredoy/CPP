@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   
+    map <string ,int> mp;
+    int t = 1;
+    cin>> t;
+    while (t--)
+    {
+        int x;
+        string s;
+        cin >> x >> s;
+        if(x == 1)
+        {
+             int y;
+             cin >> y;
+             mp[s]  +=y;
+        }
+        else if(x == 2)
+        {
+            mp[s] = 0;
+        }
+    
+        else 
+        {
+            cout << mp[s] << endl;
+        }
+    
+    
+    }
+    
+         return 0;
+
+}
