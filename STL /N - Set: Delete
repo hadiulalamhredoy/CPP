@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    unordered_set<int> S;
+    int q;
+    cin >> q;
+    while (q--) {
+        int op, x;
+        cin >> op >> x;
+        if (op == 0) {
+            S.insert(x);
+            cout << S.size() << '\n';
+        } else if (op == 1) {
+            cout << (S.count(x) ? 1 : 0) << '\n';
+        } else if (op == 2) {
+            S.erase(x);
+        }
+    }
+    return 0;
+}
