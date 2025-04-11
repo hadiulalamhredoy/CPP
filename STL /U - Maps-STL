@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    unordered_map<string, int> studentMarks;
+    int Q;
+    cin >> Q;
+    while (Q--) {
+        int type;
+        cin >> type;
+        if (type == 1) {
+            string X;
+            int Y;
+            cin >> X >> Y;
+            studentMarks[X] += Y;
+        } else if (type == 2) {
+            string X;
+            cin >> X;
+            studentMarks.erase(X);
+        } else if (type == 3) {
+            string X;
+            cin >> X;
+            if (studentMarks.find(X) != studentMarks.end()) {
+                cout << studentMarks[X] << '\n';
+            } else {
+                cout << 0 << '\n';
+            }
+        }
+    }
+    return 0;
+}
