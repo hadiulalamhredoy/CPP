@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Custom comparator for sorting
+bool compare(const tuple<int, int, char, long long, string> &a,
+             const tuple<int, int, char, long long, string> &b) {
+    if (get<0>(a) != get<0>(b)) return get<0>(a) < get<0>(b); // Sort by value
+    if (get<1>(a) != get<1>(b)) return get<1>(a) < get<1>(b); // Sort by weight
+    if (get<2>(a) != get<2>(b)) return get<2>(a) < get<2>(b); // Sort by type
+    if (get<3>(a) != get<3>(b)) return get<3>(a) < get<3>(b); // Sort by date
+    return get<4>(a) < get<4>(b); // Sort by name
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<tuple<int, int, char, long long, string>> items(n);
+
+    for (int i = 0; i < n; i++) {
+        int value, weight;
+        char type;
+        long long date;
+        string name;
+        cin >> value >> weight >> type >> date >> name;
+        items[i] = make_tuple(value, weight, type, date, name);
+    }
+
+    sort(items.begin(), items.end(), compare);
+
+    for (const auto &item : items) {
+        cout << get<0>(item) << " " << get<1>(item) << " " << get<2>(item) << " "
+             << get<3>(item) << " " << get<4>(item) << "\n";
+    }
+
+    return 0;
+}
