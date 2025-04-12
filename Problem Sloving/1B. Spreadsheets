@@ -1,0 +1,68 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int n;
+    cin >> n;
+    cin.ignore();
+    
+    while (n--) {
+        string s;
+        getline(cin, s);
+        
+        // Check if it's RXCY format
+        bool is_rxcy = false;
+        if (s[0] == 'R' && isdigit(s[1])) {
+            size_t c_pos = s.find('C');
+            if (c_pos != string::npos && c_pos > 1) {
+                is_rxcy = true;
+            }
+        }
+        
+        if (is_rxcy) {
+            // Convert RXCY to Excel format
+            size_t c_pos = s.find('C');
+            int row = stoi(s.substr(1, c_pos - 1));
+            int col = stoi(s.substr(c_pos + 1));
+            
+            string col_str;
+            while (col > 0) {
+                col--;
+                col_str = char('A' + (col % 26)) + col_str;
+                col /= 26;
+            }
+            
+            cout << col_str << row << '\n';
+        } else {
+            // Convert Excel to RXCY format
+            string col_str;
+            int row = 0;
+            int i = 0;
+            
+            // Extract letters (column)
+            while (i < s.size() && isalpha(s[i])) {
+                col_str += s[i];
+                i++;
+            }
+            
+            // Extract digits (row)
+            while (i < s.size() && isdigit(s[i])) {
+                row = row * 10 + (s[i] - '0');
+                i++;
+            }
+            
+            // Convert letters to column number
+            int col = 0;
+            for (char c : col_str) {
+                col = col * 26 + (c - 'A' + 1);
+            }
+            
+            cout << "R" << row << "C" << col << '\n';
+        }
+    }
+    
+    return 0;
+}
