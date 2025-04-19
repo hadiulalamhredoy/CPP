@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check_parity(const vector<int>& arr, int start) {
+    // Check if all elements starting from index 'start' (even/odd) have the same parity
+    int parity = arr[start] % 2;
+    for (int i = start; i < arr.size(); i += 2) {
+        if (arr[i] % 2 != parity)
+            return false;
+    }
+    return true;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int &x : a) cin >> x;
+
+        // Check parity consistency in even and odd indices separately
+        if (check_parity(a, 0) && check_parity(a, 1)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}
