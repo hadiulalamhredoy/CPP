@@ -1,1 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    long long a, b;
+    scanf("%lld %lld", &a, &b);
+
+    long long d = a / b;     
+    long long r = a % b;    
+    double f = (double)a / b;
+
+    printf("%lld %lld %.5f\n", d, r, f);
+
+    return 0;
+}
 
